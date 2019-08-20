@@ -8,7 +8,7 @@
 # docker run  -it --rm networkstatic/iperf3 -c <SERVER_IP>
 #
 FROM debian:latest
-MAINTAINER Matthew Mattox matthew.mattox@rancher.com
+MAINTAINER Matthew Mattox <matthew.mattox@rancher.com> / Stefan Lasiewski <slasiewski@lbl.gov>
 # Based on https://hub.docker.com/r/networkstatic/iperf3/dockerfile
 
 # install binary and remove cache
@@ -20,6 +20,10 @@ RUN apt-get -qq update \
     procps \
     net-tools\
     wget \
+    nmon \
+    top \
+    htop \
+    nano \
     && rm -rf /var/lib/apt/lists/*
 
 # Expose the default iperf3 server port
