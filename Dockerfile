@@ -21,8 +21,6 @@ RUN apt-get -qq update \
     net-tools\
     wget \
     nmon \
-    top \
-    htop \
     nano \
     && rm -rf /var/lib/apt/lists/*
 
